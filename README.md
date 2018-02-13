@@ -32,7 +32,7 @@ Once you have given yourself a large stash of coins in your piggybank, look at e
 
 When done, output the value to the browser console.
 
-For example, if my piggy bank only held those pennies from above, when I type the variable name of `dolllarAmount` into the console, the output would be.
+For example, if my piggy bank only held those pennies from above, when I type the variable name of `dollarAmount` into the console, the output would be.
 
 ```
 sh

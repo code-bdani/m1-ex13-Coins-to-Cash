@@ -1,29 +1,21 @@
-var piggyBank = {
-    quarters: 0,
-    dimes: 0,
-    nickles: 0,
-    pennies: 0
+const piggyBank = {
+    quarters: prompt("How many quarters do you have?"),
+    dimes: prompt("How many dimes do you have?"),
+    nickles: prompt("How many nickles do you have?"),
+    pennies: prompt("How many pennies do you have?")
 };
 console.log("Piggy Bank", piggyBank);
 
-var userQuarters = prompt("How many quarters do you have?");
-console.log("User's quarters: ", userQuarters);
+let dollarAmount = 0;
+console.log("dollarAmount", dollarAmount);
 
-var userDimes = prompt("How many dimes do you have?");
-console.log("User's dimes: ", userDimes);
+piggyBank.quarters = piggyBank.quarters * 0.25;
+piggyBank.dimes = piggyBank.dimes * 0.10;
+piggyBank.nickles = piggyBank.nickles * 0.05;
+piggyBank.pennies = piggyBank.pennies * 0.01;
+console.log("Value of quarters:", piggyBank.quarters, "Value of dimes:", piggyBank.dimes, "Value of nickles:", piggyBank.nickles, "Value of pennies:", piggyBank.pennies);
 
-var userNickles = prompt("How many nickles do you have?");
-console.log("User's nickles: ", userNickles);
-
-var userPennies = prompt("How many pennies do you have?");
-console.log("User's pennies: ", userPennies);
-
-function userPiggyBank(userQuarters, userDimes, userNickles, userPennies) {
-    return {
-        userQuarters: userQuarters,
-        userDimes: userDimes,
-        userNickles: userNickles,
-        userPennies: userPennies
-    };
-}
-console.log("The User's Piggy Bank", userQuarters, userDimes, userNickles, userPennies);
+function getTotal() {
+    dollarAmount += (piggyBank.quarters + piggyBank.dimes + piggyBank.nickles + piggyBank.pennies) / 100;
+    return dollarAmount;
+};
