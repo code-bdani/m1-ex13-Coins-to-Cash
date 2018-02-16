@@ -24,9 +24,10 @@ piggyBank.quarters = (piggyBank.quarters * .25);
 piggyBank.dimes = (piggyBank.dimes * .10);
 piggyBank.nickles = (piggyBank.nickles * .05);
 piggyBank.pennies = (piggyBank.pennies * .01);
-console.log("Value of quarters:", piggyBank.quarters.toFixed(2), "Value of dimes:", piggyBank.dimes.toFixed(2), "Value of nickles:", piggyBank.nickles.toFixed(2), "Value of pennies:", piggyBank.pennies.toFixed(2));
+console.log("Value of quarters:", piggyBank.quarters, "Value of dimes:", piggyBank.dimes, "Value of nickles:", piggyBank.nickles, "Value of pennies:", piggyBank.pennies);
 
 dollarAmount = (piggyBank.quarters + piggyBank.dimes + piggyBank.nickles + piggyBank.pennies);
 
 var totalOutput = document.getElementById("total");
-totalOutput.innerHTML = `<h2>Your total is: $${dollarAmount}!</h2>`;
+var roundedTotal = dollarAmount.toFixed(2);
+totalOutput.innerHTML = `<h2>Your total is: ${dollarAmount}!</h2>`;
